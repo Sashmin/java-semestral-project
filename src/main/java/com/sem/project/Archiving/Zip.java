@@ -7,7 +7,7 @@ import java.util.zip.ZipOutputStream;
 
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
-public class ZipperUnzipper {
+public class Zip {
 
     public static void zipSingleFile(String fileName, String zipFileName)
             throws IOException {
@@ -48,10 +48,9 @@ public class ZipperUnzipper {
 
 
     public static void main(String[] args) throws IOException {
-//        zipSingleFile("baz.xml", "arch.zip");
-//        File zip = new File("arch.zip");
-//        Path zipPath = Paths.get("arch.zip");
-//        System.out.println(zipPath.toAbsolutePath().getParent());
-//        extractFile(zipPath, "baz.xml", zipPath.toAbsolutePath().getParent().resolve("baz.xml"));
+        File zip = new File("comp.zip");
+        Path zipPath = Paths.get("comp.zip");
+        System.out.println(zipPath.toAbsolutePath().getParent());
+        extractFile(zipPath, "test.txt", zipPath.toAbsolutePath().getParent().resolve("out.txt"));
     }
 }

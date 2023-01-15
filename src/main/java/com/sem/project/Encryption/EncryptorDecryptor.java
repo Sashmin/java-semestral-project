@@ -31,6 +31,8 @@ public class EncryptorDecryptor {
             {
                 outBuf.write(encryptedBytes);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -50,8 +52,8 @@ public class EncryptorDecryptor {
 
     public static void main(String[] args) throws NoSuchPaddingException, NoSuchAlgorithmException,
             InvalidKeyException, IOException, IllegalBlockSizeException, BadPaddingException  {
-        encrypt("1234567890123456", "baz.xml", "baz.xml");
-        decrypt("1234567890123456", "baz.xml", "text.txt");
+        encrypt("12345678901234561234567890123456", "7ztest.7z", "file.enc");
+        decrypt("12345678901234561234567890123456", "file.enc", "arch.7z");
     }
 }
 

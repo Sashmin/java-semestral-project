@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1169c5fd-ea7e-49d7-a793-8479650e5d9b" name="Changes" comment="added EncryptorDecryptor class">
+    <list default="true" id="1169c5fd-ea7e-49d7-a793-8479650e5d9b" name="Changes" comment="added ZipperUnzipper class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sem/project/Archiving/ZipperUnzipper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sem/project/Archiving/ZipperUnzipper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sem/project/Encryption/EncryptorDecryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sem/project/Encryption/EncryptorDecryptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +37,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/JavaProjects/7z",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ZipperUnzipper">
     <configuration name="EncryptorDecryptor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sem.project.Encryption.EncryptorDecryptor" />
       <module name="java-semestral-project" />
@@ -57,8 +59,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Zip" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sem.project.Archiving.Zip" />
+      <module name="java-semestral-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sem.project.Archiving.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ZipperUnzipper" />
         <item itemvalue="Application.EncryptorDecryptor" />
       </list>
     </recent_temporary>
@@ -71,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673777085306</updated>
-      <workItem from="1673777086555" duration="2545000" />
+      <workItem from="1673777086555" duration="13516000" />
     </task>
     <task id="LOCAL-00001" summary="added .gitignore">
       <created>1673778618320</created>
@@ -87,7 +103,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673778916819</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added Parser class">
+      <created>1673780063070</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673780063070</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Parser refactoring">
+      <created>1673788388526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673788388526</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added ZipperUnzipper class">
+      <created>1673788809490</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673788809490</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +144,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added .gitignore" />
     <MESSAGE value="added EncryptorDecryptor class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added EncryptorDecryptor class" />
+    <MESSAGE value="added Parser class" />
+    <MESSAGE value="Parser refactoring" />
+    <MESSAGE value="added ZipperUnzipper class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ZipperUnzipper class" />
   </component>
 </project>
