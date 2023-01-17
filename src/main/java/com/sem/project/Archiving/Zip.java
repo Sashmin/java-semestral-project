@@ -9,22 +9,22 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 public class Zip {
 
-    public static void zipSingleFile(String fileName, String zipFileName)
+    public static void zipSingleFile(Path filePath, Path zipFileName)
             throws IOException {
 
-        File file = new File(fileName);
+        //File file = new File(filePath);
 
-        if (!file.exists()) {
+        if (!Files.exists(filePath)) {
             System.err.println("Please provide a file.");
             return;
         }
 
         try (ZipOutputStream zos = new ZipOutputStream(
-                new FileOutputStream(zipFileName));
-             FileInputStream fis = new FileInputStream(file);
+                new FileOutputStream(zipFileName.toFile()));
+             FileInputStream fis = new FileInputStream(filePath.toFile());
         ) {
 
-            ZipEntry zipEntry = new ZipEntry(fileName);
+            ZipEntry zipEntry = new ZipEntry(filePath.getFileName().toString());
             zos.putNextEntry(zipEntry);
 
             byte[] buffer = new byte[1024];
@@ -48,9 +48,8 @@ public class Zip {
 
 
     public static void main(String[] args) throws IOException {
-        File zip = new File("comp.zip");
-        Path zipPath = Paths.get("comp.zip");
-        System.out.println(zipPath.toAbsolutePath().getParent());
-        extractFile(zipPath, "test.txt", zipPath.toAbsolutePath().getParent().resolve("out.txt"));
+
+        zipSingleFile(Paths.get("D:\\temp\\much.txt"), Paths.get("D:\\temp\\ffff.zip"));
     }
+
 }
