@@ -11,5 +11,5 @@ import java.security.NoSuchAlgorithmException;
 public interface DataSource {
     Path writeData() throws IOException, IllegalBlockSizeException, NoSuchPaddingException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException;
 
-    String readData();
+    Path readData(Path path) throws IOException, IllegalBlockSizeException, NoSuchPaddingException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException;
 }

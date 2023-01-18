@@ -53,8 +53,9 @@ public class EncryptorDecryptor {
 
     public static void main(String[] args) throws NoSuchPaddingException, NoSuchAlgorithmException,
             InvalidKeyException, IOException, IllegalBlockSizeException, BadPaddingException  {
-        encrypt("12345678901234561234567890123456", Paths.get("7ztest.7z"), Paths.get("file.enc"));
-        decrypt("12345678901234561234567890123456", Paths.get("file.enc"), Paths.get("arch.7z"));
+        encrypt("1234567890123456", Paths.get("D:\\temp\\text.txt"), Paths.get("D:\\temp\\file.enc"));
+        encrypt("0987654321098765", Paths.get("D:\\temp\\file.enc"), Paths.get("D:\\temp\\double.enc"));
+        //decrypt("12345678901234561234567890123456", Paths.get("file.enc"), Paths.get("arch.7z"));
     }
 }
 

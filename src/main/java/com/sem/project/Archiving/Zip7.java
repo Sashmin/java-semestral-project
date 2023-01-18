@@ -27,7 +27,7 @@ public class Zip7 {
         }
     }
 
-    public static void decompress(String in, File destination) throws IOException {
+    public static void unzip(String in, File destination) throws IOException {
         SevenZFile sevenZFile = new SevenZFile(new File(in));
         SevenZArchiveEntry entry;
         while ((entry = sevenZFile.getNextEntry()) != null){
@@ -49,6 +49,6 @@ public class Zip7 {
 
     public static void main(String[] args) throws IOException{
         File dest = new File("./");
-        decompress("archivet.7z", dest);
+        unzip("archivet.7z", dest);
     }
 }

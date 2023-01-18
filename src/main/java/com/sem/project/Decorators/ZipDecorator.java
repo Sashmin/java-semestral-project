@@ -52,8 +52,17 @@ public class ZipDecorator extends DataSourceDecorator {
     }
 
     @Override
-    public String readData() {
-        return decompress(super.readData());
+    public Path readData(Path path) throws IOException, IllegalBlockSizeException, NoSuchPaddingException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
+
+        if (Zip.countRegularFiles(path) != 1) {
+            throw new IllegalArgumentException("wrong zip file configuration: must contains only 1 file");
+        }
+        String fileName = "unzip" + operationNumber + ".txt";
+        Path tempFile = Zip.unzip(path);
+
+        Files.delete(path);
+        super.readData(tempFile);
+        return super.readData(tempFile);
     }
 
     private String compress(String stringData) {

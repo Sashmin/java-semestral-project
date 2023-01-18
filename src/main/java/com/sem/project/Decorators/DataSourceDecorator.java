@@ -5,7 +5,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
@@ -24,7 +23,7 @@ public class DataSourceDecorator implements DataSource {
     }
 
     @Override
-    public String readData() {
-        return wrappee.readData();
+    public Path readData(Path path) throws IOException, IllegalBlockSizeException, NoSuchPaddingException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
+        return wrappee.readData(path);
     }
 }
